@@ -19,6 +19,7 @@ import {
 	mintOneToken,
 	shortenAddress,
 } from "./candy-machine";
+import {Container, Nav, Navbar} from "react-bootstrap";
 
 const ConnectButton = styled(WalletDialogButton)``;
 
@@ -152,60 +153,26 @@ const Home = (props: HomeProps) => {
 
 	return (
 		<main>
-      <Site/>
-			{wallet && (
-				<p>
-					Address: {shortenAddress(wallet.publicKey.toBase58() || "")}
-				</p>
-			)}
-
-			{wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>}
-
-			<MintContainer>
-				{!wallet ? (
-					<ConnectButton>Connect Wallet</ConnectButton>
-				) : (
-					<MintButton
-						disabled={isSoldOut || isMinting || !isActive}
-						onClick={onMint}
-						variant="contained"
-					>
-						{isSoldOut ? (
-							"SOLD OUT"
-						) : isActive ? (
-							isMinting ? (
-								<CircularProgress />
-							) : (
-								"MINT"
-							)
-						) : (
-							<Countdown
-								date={startDate}
-								onMount={({ completed }) =>
-									completed && setIsActive(true)
-								}
-								onComplete={() => setIsActive(true)}
-								renderer={renderCounter}
-							/>
-						)}
-					</MintButton>
-				)}
-			</MintContainer>
-
-			<Snackbar
-				open={alertState.open}
-				autoHideDuration={6000}
-				onClose={() => setAlertState({ ...alertState, open: false })}
-			>
-				<Alert
-					onClose={() =>
-						setAlertState({ ...alertState, open: false })
-					}
-					severity={alertState.severity}
-				>
-					{alertState.message}
-				</Alert>
-			</Snackbar>
+			<Navbar sticky="top" bg="dark" variant="dark">
+				<Container>
+					<Navbar.Brand href="#top-content">RandomDudez</Navbar.Brand>
+					<Navbar.Collapse id="basic-navbar-nav">
+						<Nav className="ml-auto">
+							<Nav.Link href="#roadmap">Roadmap</Nav.Link>
+							<Nav.Link href="#collection">Collection</Nav.Link>
+							<Nav.Link href="#team">Team</Nav.Link>
+						</Nav>
+					</Navbar.Collapse>
+				</Container>
+			</Navbar>
+			<Site
+				candyMachineId={props.candyMachineId}
+				config={props.config}
+				connection={props.connection}
+				startDate={props.startDate}
+				treasury={props.treasury}
+				txTimeout={props.txTimeout}
+			/>
 		</main>
 	);
 };
