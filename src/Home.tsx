@@ -16,7 +16,7 @@ export interface HomeProps {
 const Home = (props: HomeProps) => {
 	return (
 		<main>
-			<Navbar sticky="top" bg="dark" variant="dark">
+			<Navbar className="navbar-transparent" sticky="top" variant="dark">
 				<Container>
 					<Navbar.Brand href="#top-content">RandomDudez</Navbar.Brand>
 					<Navbar.Collapse id="basic-navbar-nav">

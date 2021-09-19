@@ -14,6 +14,10 @@ body {
 	);
 }
 
+.navbar-transparent {
+	background: rgba(0,0,0,0.2);
+}
+
 .twitter-logo {
 	max-height: 50px;
 }

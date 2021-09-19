@@ -239,6 +239,7 @@ const Site = (props: SiteProps) => {
 					<div className="row">
 						<div className="col portfolio section-description wow fadeIn">
 							<h2>Roadmap</h2>
+							<br/>
 							<h4>
 								We set some amazing goals for the community.
 								<br/>
