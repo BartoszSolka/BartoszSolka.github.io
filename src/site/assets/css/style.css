@@ -14,20 +14,27 @@ body {
 	);
 }
 
+.twitter-logo {
+	max-height: 50px;
+}
+
 .container {
 	text-align: center;
 }
 
 #main {
-	max-height: 750px;
+	max-height: 600px;
 }
 
+div .team {
+	margin-top: -25px;
+}
 .welcome.row {
 	align-items: center;
 }
 
 .collection-preview img {
-	max-height: 300px;
+	max-height: 400px;
 	margin: auto;
 	display: block;
 }
@@ -90,7 +97,16 @@ img {
 
 .section-container {
 	margin: 0 auto;
-	padding-bottom: 80px;
+	padding-top: 70px;
+	padding-bottom: 10px;
+}
+
+#team {
+	padding-bottom: 50px;
+}
+
+.roadmap-text {
+	text-align: left;
 }
 
 .section-container-gray-bg {
@@ -221,7 +237,7 @@ img {
 /***** Top content *****/
 
 .top-content {
-	padding: 100px 0;
+	padding: 50px 0;
 }
 
 .top-content .text {
@@ -387,7 +403,7 @@ img {
 
 .portfolio-box {
 	padding-top: 30px;
-	text-align: left;
+	text-align: center;
 }
 
 .portfolio-box-image {
@@ -415,8 +431,24 @@ img {
 	margin-top: 30px;
 }
 .portfolio-box h3 a {
-	color: #555;
+	color: #ccc;
+	text-decoration: none;
 }
+
+h4 {
+	color: #ccc;
+}
+
+.brightness {
+	display: inline-block;
+}
+.brightness img {
+	opacity: 0.5;
+}
+.brightness img:hover {
+	opacity: 1;
+}
+
 .portfolio-box h3 a:hover,
 .portfolio-box h3 a:focus {
 	color: #9b59b6;

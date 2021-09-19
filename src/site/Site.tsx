@@ -7,14 +7,14 @@ import "./assets/css/media-queries.css";
 
 import dude1 from './assets/img/dudez/dude1.png'
 import dude2 from './assets/img/dudez/dude2.png'
+import twitterLogo from './assets/img/white-twitter-logo.png'
 import Countdown from "react-countdown";
 import Alert from "@material-ui/lab/Alert";
 import {
 	awaitTransactionSignatureConfirmation,
 	CandyMachine,
 	getCandyMachineState,
-	mintOneToken,
-	shortenAddress
+	mintOneToken
 } from "../candy-machine";
 import {useEffect, useState} from "react";
 import {useAnchorWallet} from "@solana/wallet-adapter-react";
@@ -38,20 +38,6 @@ export interface SiteProps {
 	txTimeout: number;
 }
 
-interface AlertState {
-	open: boolean;
-	message: string;
-	severity: "success" | "info" | "warning" | "error" | undefined;
-}
-
-const renderCounter = ({ days, hours, minutes, seconds, completed }: any) => {
-	return (
-		<CounterText>
-			{hours} hours, {minutes} minutes, {seconds} seconds
-		</CounterText>
-	);
-};
-
 const Site = (props: SiteProps) => {
 	const [balance, setBalance] = useState<number>();
 	const [isActive, setIsActive] = useState(false); // true when countdown completes
@@ -64,7 +50,7 @@ const Site = (props: SiteProps) => {
 		severity: undefined,
 	});
 
-	const [startDate, setStartDate] = useState(new Date(props.startDate));
+	const [startDate, setStartDate] = useState(new Date(props.startDate * 1000));
 
 	const wallet = useAnchorWallet();
 	const [candyMachine, setCandyMachine] = useState<CandyMachine>();
@@ -253,36 +239,66 @@ const Site = (props: SiteProps) => {
 					<div className="row">
 						<div className="col portfolio section-description wow fadeIn">
 							<h2>Roadmap</h2>
-							<h3>
-								We set some amazing goals for the community. We
-								want to have an impact on both Metaverse and the
-								real world. Once we sell enough RandomDudez
-								there are some exciting things bound to happen.
-							</h3>
-							<p>
-								10% - RandomDudez community discord server. A
+							<h4>
+								We set some amazing goals for the community.
+								<br/>
+								We want to have an impact on both Metaverse and the
+								real world.
+								<br/>
+								Once the RandomDudez community gets big, there are some exciting things bound to happen.
+							</h4>
+						</div>
+					</div>
+					<br/>
+					<div className="row">
+						<div className="col-md-3">
+							<h2>10%</h2>
+						</div>
+						<div className="col-md-9">
+							<p className={"roadmap-text"}>
+								<b>RandomDudez community discord server.</b> A
 								place to meet other Random Dudez, share Your
 								crypto stories and create new ones.
 							</p>
-							<p>
-								25% - RandomDudez merch store. Buy limited
+						</div>
+					</div>
+					<div className="row">
+						<div className="col-md-3">
+							<h2>25%</h2>
+						</div>
+						<div className="col-md-9">
+							<p className={"roadmap-text"}>
+								<b>RandomDudez merch store.</b> Buy limited
 								edition t-shirts, mugs, bucket hats.
 							</p>
-							<p>
-								50% - The milestone! Random Dudez will start
-								changing the real world. We will create a series
-								of murals around some of the capitals of the
-								world. Imagine Your Random Dude looking at You
-								from the wall near Your office. Every 10% (50%,
-								60%, 70%, 80%, 90%) will mean one more mural
+						</div>
+					</div>
+					<div className="row">
+						<div className="col-md-3">
+							<h2>50%</h2>
+						</div>
+						<div className="col-md-9">
+							<p className={"roadmap-text"}>
+								The milestone! Random Dudez will start
+								changing the real world. We will create a <b>series
+								of murals</b> around some of the capitals of the
+								world <b>(ex. Paris, Tokyo, New York, Warsaw, Moscow, Brasília)</b>. Imagine Your Random Dude looking at You
+								from the wall near Your office. Every 10% <b>(50%,
+								60%, 70%, 80%, 90%)</b> will mean one more mural
 								around the world.
 							</p>
-							<p>
-								100% - RandomDudez Foot Truck Tour! We will
+						</div>
+					</div>
+					<div className="row">
+						<div className="col-md-3">
+							<h2>100%</h2>
+						</div>
+						<div className="col-md-9">
+							<p className={"roadmap-text"}>
+								<b>RandomDudez Foot Truck Tour!</b> We will
 								depart on an 8-month journey around the globe
 								(USA, Europe, Asia) with Random Dudez branded
-								food truck. That's it, we're done, we will be
-								selling food from now on. Until next time.
+								food truck.
 							</p>
 						</div>
 					</div>
@@ -295,7 +311,7 @@ const Site = (props: SiteProps) => {
 				<div className="container">
 					<div className="row">
 						<div className="col portfolio section-description wow fadeIn">
-							<h2>The Collection</h2>
+							<h2>Collection</h2>
 							<p>
 								{" "}
 								From crypto to crypto, 7777 unique, special
@@ -343,54 +359,67 @@ const Site = (props: SiteProps) => {
 				<div className="container">
 					<div className="row">
 						<div className="col portfolio section-description wow fadeIn">
-							<h2>The Team</h2>
+							<h2>Team</h2>
 							<p>Dudez behind the Random!</p>
+							<a href="https://twitter.com/RandomDudez_nft" target={"_blank"} rel="noreferrer">
+								<div className="brightness">
+									<img className="twitter-logo" src={twitterLogo}/>
+								</div>
+							</a>
 						</div>
 					</div>
 					<div className="row">
 						<div className="col-md-4 portfolio-box wow fadeInUp">
 							<h3>
-								<a href="#">@piotrek</a>
+								<a href="https://twitter.com/RandomDudez_nft" target={"_blank"} rel="noreferrer">
+									@SE7EN
+									<div className="collection-preview team">
+										<img src={dude1} />
+									</div>
+									Co-founder
+								</a>
 							</h3>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur
-								adipisicing elit, sed do eiusmod tempor
-								incididunt ut labore et.
-							</p>
-							<div className="collection-preview">
-								<img src={dude1} />
-							</div>
 						</div>
 						<div className="col-md-4 portfolio-box wow fadeInDown">
 							<h3>
-								<a href="#">@bartek</a>
+								<a href="https://twitter.com/Sartosz" target={"_blank"} rel="noreferrer">
+									@Sartosz
+									<div className="collection-preview team">
+										<img src={dude1} />
+									</div>
+									Co-founder
+								</a>
 							</h3>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur
-								adipisicing elit, sed do eiusmod tempor
-								incididunt ut labore et.
-							</p>
-							<div className="collection-preview">
-								<img src={dude1} />
-							</div>
 						</div>
 						<div className="col-md-4 portfolio-box wow fadeInUp">
 							<h3>
-								<a href="#">@kuba</a>
+								<a href="https://www.instagram.com/jimzee.art/" target={"_blank"} rel="noreferrer">
+									@jimzee
+									<div className="collection-preview team">
+										<img src={dude1} />
+									</div>
+									Artist
+								</a>
 							</h3>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur
-								adipisicing elit, sed do eiusmod tempor
-								incididunt ut labore et.
-							</p>
-							<div className="collection-preview">
-								<img src={dude1} />
-							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	);
+};
+
+interface AlertState {
+	open: boolean;
+	message: string;
+	severity: "success" | "info" | "warning" | "error" | undefined;
+}
+
+const renderCounter = ({ days, hours, minutes, seconds, completed }: any) => {
+	return (
+		<CounterText>
+			{hours} hours, {minutes} minutes, {seconds} seconds
+		</CounterText>
 	);
 };
 
