@@ -1,28 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.2247b801.chunk.css",
-    "main.js": "/static/js/main.a0b592bf.chunk.js",
-    "main.js.map": "/static/js/main.a0b592bf.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.e6523308.js",
-    "runtime-main.js.map": "/static/js/runtime-main.e6523308.js.map",
+    "main.css": "/static/css/main.7c903901.chunk.css",
+    "main.js": "/static/js/main.527f7d9b.chunk.js",
+    "main.js.map": "/static/js/main.527f7d9b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.3c282b84.js",
+    "runtime-main.js.map": "/static/js/runtime-main.3c282b84.js.map",
     "static/css/2.c490997a.chunk.css": "/static/css/2.c490997a.chunk.css",
-    "static/js/2.ff2c326b.chunk.js": "/static/js/2.ff2c326b.chunk.js",
-    "static/js/2.ff2c326b.chunk.js.map": "/static/js/2.ff2c326b.chunk.js.map",
-    "static/js/3.9c86ac8f.chunk.js": "/static/js/3.9c86ac8f.chunk.js",
-    "static/js/3.9c86ac8f.chunk.js.map": "/static/js/3.9c86ac8f.chunk.js.map",
+    "static/js/2.894a9257.chunk.js": "/static/js/2.894a9257.chunk.js",
+    "static/js/2.894a9257.chunk.js.map": "/static/js/2.894a9257.chunk.js.map",
+    "static/js/3.e7e0e8b5.chunk.js": "/static/js/3.e7e0e8b5.chunk.js",
+    "static/js/3.e7e0e8b5.chunk.js.map": "/static/js/3.e7e0e8b5.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.c490997a.chunk.css.map": "/static/css/2.c490997a.chunk.css.map",
-    "static/css/main.2247b801.chunk.css.map": "/static/css/main.2247b801.chunk.css.map",
-    "static/js/2.ff2c326b.chunk.js.LICENSE.txt": "/static/js/2.ff2c326b.chunk.js.LICENSE.txt",
+    "static/css/main.7c903901.chunk.css.map": "/static/css/main.7c903901.chunk.css.map",
+    "static/js/2.894a9257.chunk.js.LICENSE.txt": "/static/js/2.894a9257.chunk.js.LICENSE.txt",
     "static/media/dude1.3bde72a6.png": "/static/media/dude1.3bde72a6.png",
-    "static/media/dude2.e5f33e4d.png": "/static/media/dude2.e5f33e4d.png",
     "static/media/white-twitter-logo.c3b97b2d.png": "/static/media/white-twitter-logo.c3b97b2d.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.e6523308.js",
+    "static/js/runtime-main.3c282b84.js",
     "static/css/2.c490997a.chunk.css",
-    "static/js/2.ff2c326b.chunk.js",
-    "static/css/main.2247b801.chunk.css",
-    "static/js/main.a0b592bf.chunk.js"
+    "static/js/2.894a9257.chunk.js",
+    "static/css/main.7c903901.chunk.css",
+    "static/js/main.527f7d9b.chunk.js"
   ]
 }
